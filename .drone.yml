@@ -1,0 +1,12 @@
+cache:
+  mount:
+    - /tmp/bundler
+    
+clone:
+  depth: 1    
+    
+build:
+  image: ruby:2.2  
+  commands:
+    - bundle install --path=/tmp/bundler
+    - bundle exec rake spec
